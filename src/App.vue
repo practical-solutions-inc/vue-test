@@ -1,17 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img class="pug-picture" alt="PUG" src="./assets/pug.jpg">
+    <Comments :comments="comments"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Comments from './components/Comments.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Comments
+  },
+  data() {
+    return {
+      comments: [
+        "Omg that's the cUTEST DOG EVER",
+        "14/10. Very good boi.",
+        "My Dog is better :/"
+      ]
+    }
   }
 }
 </script>
@@ -19,10 +28,12 @@ export default {
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+
+.pug-picture {
+  max-width: 800px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>
