@@ -18,7 +18,7 @@ export default {
     },
     methods: {
         remove(comment) {
-            // oh no it's empty!!! whatever will you do???
+            this.$emit('remove-comment', comment)
         }
     }
 }

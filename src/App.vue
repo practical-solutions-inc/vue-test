@@ -33,7 +33,7 @@ export default {
       this.comments = [...this.comments, comment ]
     },
     removeComment(comment) {
-      // oh no it's empty!!! whatever will you do???
+      this.comments = this.comments.filter(c => c !== comment)
     }
   }
 }
