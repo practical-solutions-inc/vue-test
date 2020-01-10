@@ -21,7 +21,9 @@ export default {
     methods: {
         onSubmit(e) {
             e.preventDefault()
-            this.$emit('add-comment', this.comment)
+            if (this.comment !== '') {
+                this.$emit('add-comment', this.comment)
+            }
         }
     }
 }
