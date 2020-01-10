@@ -13,4 +13,4 @@ I love my dog. I love everything about him. Like the fact that he is definitely 
 - Only real comments allowed. An empty comment should not be added to the list.
 
 #### Bonus: 
-I only want to see 10 comments. If there are already 10 comments on the page, a user should have to delete one before being able to add another.
+I only want to see 5 comments. If there are already 5 comments on the page, a user should have to delete one before being able to add another.

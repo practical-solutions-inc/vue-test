@@ -30,7 +30,9 @@ export default {
   },
   methods: {
     newComment(comment) {
-      this.comments = [...this.comments, comment ]
+      if (this.comments.length <= 5) {
+        this.comments = [...this.comments, comment ]
+      }
     },
     removeComment(comment) {
       this.comments = this.comments.filter(c => c !== comment)
