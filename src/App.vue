@@ -2,24 +2,32 @@
   <div id="app">
     <img class="pug-picture" alt="PUG" src="./assets/pug.jpg">
     <Comments :comments="comments"/>
+    <AddComment v-on:add-comment="newComment" />
   </div>
 </template>
 
 <script>
 import Comments from './components/Comments.vue'
+import AddComment from './components/AddComment.vue'
 
 export default {
   name: 'app',
   components: {
-    Comments
+    Comments,
+    AddComment
   },
   data() {
     return {
       comments: [
-        "Omg that's the cUTEST DOG EVER",
-        "14/10. Very good boi.",
-        "My Dog is better :/"
+        "Very cute dog. 10/10.",
+        "Pretty Pupper"
       ]
+    }
+  },
+  methods: {
+    newComment(comment) {
+      // eslint-disable-next-line no-console
+      this.comments = [...this.comments, comment ]
     }
   }
 }
@@ -28,6 +36,7 @@ export default {
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  padding: 1rem 20vw;
 }
 
 .pug-picture {

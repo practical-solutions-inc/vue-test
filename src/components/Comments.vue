@@ -16,9 +16,6 @@ export default {
 </script>
 
 <style scoped>
-.comments {
-    padding: 1rem 20vw;
-}
 
 .comment {
     background-color: aliceblue;
