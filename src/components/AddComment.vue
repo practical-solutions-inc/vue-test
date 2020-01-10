@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 <template>
     <div class="add">
         <form @submit="onSubmit">
@@ -9,6 +8,9 @@
 </template>
 
 <script>
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-console */
+
 export default {
     name: "AddTodo",
     data() {
@@ -20,8 +22,6 @@ export default {
         onSubmit(e) {
             e.preventDefault()
             this.$emit('add-comment', this.comment)
-            // eslint-disable-next-line no-console
-            console.log(this.comment)
         }
     }
 }
