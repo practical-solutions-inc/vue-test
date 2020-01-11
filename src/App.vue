@@ -30,7 +30,7 @@ export default {
   },
   methods: {
     newComment(comment) {
-      if (this.comments.length <= 5) {
+      if (this.comments.length < 5) {
         this.comments = [...this.comments, comment ]
       }
     },
