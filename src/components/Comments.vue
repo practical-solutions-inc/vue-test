@@ -1,8 +1,8 @@
 <template>
   <div class="comments">
-      <div v-bind:key="comment" v-for="comment in comments" class="comment">
-        {{comment}}
-        <span @click="remove(comment)" class="remove-button">Remove</span>
+      <div v-bind:key="comment.id" v-for="comment in comments" class="comment">
+        {{comment.text}}
+        <span @click="remove(comment.id)" class="remove-button">Remove</span>
       </div>
   </div>
 </template>

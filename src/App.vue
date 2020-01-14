@@ -23,19 +23,26 @@ export default {
   data() {
     return {
       comments: [
-        "Very cute dog. 10/10.",
-        "Pretty Pupper"
+        { 
+          id: 1,
+          text: "Very cute dog. 10/10."
+        },
+        { 
+          id: 2,
+          text: "Cute Pupper :)"
+        }
       ]
     }
   },
   methods: {
-    newComment(comment) {
+    newComment(text) {
+      const lastId = this.comments.map(c => c).pop().id
       if (this.comments.length < 5) {
-        this.comments = [...this.comments, comment ]
+        this.comments = [...this.comments, { id: lastId + 1, text } ]
       }
     },
-    removeComment(comment) {
-      this.comments = this.comments.filter(c => c !== comment)
+    removeComment(commentId) {
+      this.comments = this.comments.filter(c => c.id !== commentId)
     }
   }
 }
