@@ -12,3 +12,8 @@ I love my dog. I love everything about him. Like the fact that he is definitely 
 - When a comment's "remove" button is clicked, that comment should be removed from the page.
 - Only real comments allowed. An empty comment should not be added to the list.
 - I only want to see 5 comments. If there are already 5 comments on the page, a user should have to delete one before being able to add another.
+
+### Bonus!!
+Right now, if there are multiple comments that are identical, they will all be deleted when you try to delete one. If you can (and you've completed all of the deliverables), try to make it so that only the selected comment is removed and all the other ones remain- even if they are identical.
+
+**Note:** You will need to change some code in the `<template>` section of the vue component(s) in order to do this. You may want to look up more information about vue in order to get this done, but it is also possible to complete it just by inferring the functionality of different elements within the component.
