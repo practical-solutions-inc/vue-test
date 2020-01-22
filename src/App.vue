@@ -30,10 +30,11 @@ export default {
   },
   methods: {
     newComment(comment) {
-      this.comments = [...this.comments, comment ]
+      comment !== '' && this.comments.length < 5 ?
+      this.comments = [...this.comments, comment ] : alert('comment cannot be blank or max exceeded')
     },
     removeComment(comment) {
-      // oh no it's empty!!! whatever will you do???
+      this.comments = this.comments.splice(this.comments.indexOf(comment), 1) // not DRY
     }
   }
 }

@@ -19,6 +19,7 @@ export default {
     methods: {
         remove(comment) {
             // oh no it's empty!!! whatever will you do???
+            this.comments.splice(this.comments.indexOf(comment), 1) //identicals not removed
         }
     }
 }
