@@ -1,10 +1,10 @@
 <template>
-    <div class="add">
-        <form @submit="onSubmit">
-            <input type="text" v-model="comment" placeholder="Add Comment...">
-            <input type="submit" value="Submit ">
-        </form>
-    </div>
+  <div class="add">
+    <form @submit="onSubmit">
+      <input type="text" v-model="comment" placeholder="Add Comment..." />
+      <input type="submit" value="Submit " />
+    </form>
+  </div>
 </template>
 
 <script>
@@ -12,19 +12,19 @@
 /* eslint-disable no-console */
 
 export default {
-    name: "AddTodo",
-    data() {
-      return {
-        comment: ''
-      }
-    },
-    methods: {
-        onSubmit(e) {
-            e.preventDefault()
-            this.$emit('add-comment', this.comment)
-        }
+  name: "AddTodo",
+  data() {
+    return {
+      comment: ""
+    };
+  },
+  methods: {
+    onSubmit(e) {
+      e.preventDefault();
+      this.$emit("add-comment", this.comment);
     }
-}
+  }
+};
 </script>
 
 <style scoped>

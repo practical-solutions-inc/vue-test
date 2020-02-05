@@ -1,9 +1,9 @@
 <template>
   <div class="comments">
-      <div v-bind:key="comment" v-for="comment in comments" class="comment">
-        {{comment}}
-        <span @click="remove(comment)" class="remove-button">Remove</span>
-      </div>
+    <div v-bind:key="comment" v-for="comment in comments" class="comment">
+      {{comment}}
+      <span @click="remove(comment)" class="remove-button">Remove</span>
+    </div>
   </div>
 </template>
 
@@ -12,40 +12,38 @@
 /* eslint-disable no-console */
 
 export default {
-    name: 'Comments',
-    props: {
-        comments: Array
-    },
-    methods: {
-        remove(comment) {
-            // oh no it's empty!!! whatever will you do???
-        }
+  name: "Comments",
+  props: {
+    comments: Array
+  },
+  methods: {
+    remove(comment) {
+      // oh no it's empty!!! whatever will you do???
     }
-}
+  }
+};
 </script>
 
 <style scoped>
-
 .comment {
-    background-color: aliceblue;
-    border-radius: 10px;
-    padding: 1rem;
-    margin: 10px;
-    width: auto; 
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 10px;
+  width: auto;
 }
 
 .remove-button {
-    float: right;
-    font-size: .8rem;
-    background-color: blue;
-    color: aliceblue;
-    padding: 3px;
-    border-radius: 5px;
-    cursor: pointer;
+  float: right;
+  font-size: 0.8rem;
+  background-color: blue;
+  color: aliceblue;
+  padding: 3px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .remove-button:hover {
-    background-color: black;
+  background-color: black;
 }
-
 </style>
